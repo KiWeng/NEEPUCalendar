@@ -35,7 +35,7 @@ def build_calender(time_table, alarm=15):
 
         for time_detail in lesson['节次信息']:
             weekday, class_start, class_end = time_detail_re.match(time_detail['节次']).groups()
-            for week in range(int(start_week), int(end_week)):
+            for week in range(int(start_week), int(end_week) + 1):
                 if time_detail['时间类型'] == '单周':
                     if week % 2 != 1:
                         continue
